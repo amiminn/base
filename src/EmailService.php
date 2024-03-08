@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services\System;
+namespace Amiminn\Base;
 
 use Illuminate\Support\Facades\Mail;
 

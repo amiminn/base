@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services;
+namespace Amiminn\Base;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
