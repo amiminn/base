@@ -1,0 +1,16 @@
+{
+    "name": "amiminn/base",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Amiminn\\Base\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "amiminn",
+            "email": "tholabul.amin@gmail.com"
+        }
+    ],
+    "require": {}
+}
