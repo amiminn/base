@@ -1,6 +1,6 @@
 <?php
 
-namespace Amiminn\Base;
+namespace Amiminn\Support;
 
 use Illuminate\Support\Facades\Cache;
 

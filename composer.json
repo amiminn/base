@@ -1,18 +1,19 @@
 {
-  "name": "amiminn/base",
-  "type": "library",
-  "autoload": {
-    "psr-4": {
-      "Amiminn\\Base\\": "src/"
-    }
-  },
-  "authors": [
-    {
-      "name": "amiminn",
-      "email": "tholabul.amin@gmail.com"
-    }
-  ],
-  "minimum-stability": "dev",
-  "license": "MIT",
-  "require": {}
+    "name": "amiminn/support",
+    "description": "laravel support system",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Amiminn\\Support\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "amiminn",
+            "email": "tholabul.amin@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
 }
