@@ -12,6 +12,8 @@ composer require amiminn/support:dev-master
 
 ## Usage
 
+response data berupa json
+
 ### Response
 
 ```php
@@ -19,6 +21,7 @@ use Amiminn\Support\Response;
 
 Response::success($msg);
 Response::failed($msg, $status=400);
+Response::error($status=400);
 Response::data($data);
 Response::random($num=40);
 Response::epoch();
