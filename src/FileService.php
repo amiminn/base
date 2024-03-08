@@ -2,7 +2,7 @@
 
 namespace Amiminn\Support;
 
-use App\Services\Response;
+use Amiminn\Support\Response;
 use Illuminate\Support\Facades\Storage;
 
 class FileService
