@@ -10,6 +10,18 @@ Use the package manager composer to install
 composer require amiminn/support:dev-master
 ```
 
+## setup
+tambahkan class di `config/app.php`
+```php
+/* package service provider */
+Amiminn\Support\Config\App::class,
+```
+
+jalankan artisan publish
+```
+php artisan vendor:publish --tag=public
+```
+
 ## Usage
 
 ### Response
