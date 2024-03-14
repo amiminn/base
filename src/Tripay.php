@@ -4,7 +4,7 @@ namespace Amiminn\Support;
 
 class Tripay
 {
-    public static function generate($method = 'QRIS', $amount = 0, $order_item = [], $return_url = null)
+    public static function generate($method = 'QRIS', $amount = 0, $order_item = [], $callback_url, $return_url = null)
     {
         $apiKey       = 'DEV-sXYoVt41Ll9V3sVZgjy8crNl82LhIJ5AiLc84dzx';
         $privateKey   = 'mkyrx-9Uxz4-xZDJG-kHZkI-RijJo';
@@ -16,7 +16,7 @@ class Tripay
             'method'         => $method,
             'merchant_ref'   => $merchantRef,
             'amount'         => $amount,
-            'customer_name'  => 'vmme',
+            'customer_name'  => 'vmme-commerce',
             'customer_email' => 'cs@vmme.fund',
             'order_items'    => $order_item,
             // 'order_items'    => [
@@ -27,6 +27,7 @@ class Tripay
             //     ]
             // ],
             'return_url'   => $return_url,
+            "callback_url" => $callback_url,
             // 'return_url'   => 'https://domainanda.com/redirect',
             // https://domainanda.com/redirect?tripay_reference=DEV-T30149147344Y1JGV&tripay_merchant_ref=INV13032024-959
             'expired_time' => (time() + (24 * 60 * 60)), // 24 jam
