@@ -6,23 +6,23 @@ import axios from "axios";
 window.jsc = JsCookie;
 
 window.encryptData = function (data) {
-    try {
-        return AES.encrypt(data, window.Laravel.app_key).toString();
-    } catch (error) {
-        console.error("harap ubah json ke string");
-    }
+  try {
+    return AES.encrypt(data, window.Laravel.app_key).toString();
+  } catch (error) {
+    console.error("harap ubah json ke string");
+  }
 };
 
 window.decryptData = function (data) {
-    return AES.decrypt(data, window.Laravel.app_key).toString(enc);
+  return AES.decrypt(data, window.Laravel.app_key).toString(enc);
 };
 
 window.axios = axios;
 window.axios.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";
 window.axios.defaults.headers.common["X-CSRF-TOKEN"] = window.Laravel.csrfToken;
 try {
-    // window.axios.defaults.headers.common["Authorization"] =
-    //     "Bearer " + decryptData(tokenBearer);
+  // window.axios.defaults.headers.common["Authorization"] =
+  //     "Bearer " + decryptData(tokenBearer);
 } catch (error) {}
 
 import _ from "lodash";
@@ -30,7 +30,7 @@ import _ from "lodash";
 window._ = _;
 
 String.prototype.isMatch = function (s) {
-    return this.match(s) !== null;
+  return this.match(s) !== null;
 };
 
 import Echo from "laravel-echo";
@@ -39,12 +39,20 @@ import Pusher from "pusher-js";
 window.Pusher = Pusher;
 
 window.Echo = new Echo({
-    broadcaster: "pusher",
-    key: "7430dd527b18cec39c6b",
-    cluster: "ap1",
-    forceTLS: true,
+  broadcaster: "pusher",
+  key: "7430dd527b18cec39c6b",
+  cluster: "ap1",
+  forceTLS: true,
 });
 
+// env
+// PUSHER_APP_ID=1773598
+// PUSHER_APP_KEY=7430dd527b18cec39c6b
+// PUSHER_APP_SECRET=44ed16cea7de28eef793
+// PUSHER_HOST=
+// PUSHER_PORT=443
+// PUSHER_SCHEME=https
+// PUSHER_APP_CLUSTER=ap1
 // example
 // Echo.channel("chat").listen(".bubble.chat", (e) => {
 //     console.log("listening event", e.callback);
