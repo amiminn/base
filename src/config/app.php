@@ -11,7 +11,8 @@ class App extends ServiceProvider
         $this->loadRoutesFrom(__DIR__ . '/../routes/web.php');
         $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
         $this->publishes([
-            __DIR__ . '/../public' => public_path('amiminn/support'),
-        ], 'public');
+            __DIR__ . '/../resources' => resource_path(),
+            __DIR__ . '/../root' => base_path(),
+        ]);
     }
 }
