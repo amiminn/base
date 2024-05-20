@@ -7,7 +7,7 @@ Beberapa helper yang saya buat untuk membantu project laravel saya sendiri [@ami
 Use the package manager composer to install
 
 ```bash
-composer require amiminn/support:dev-master
+composer require amiminn/support
 ```
 
 ## setup
