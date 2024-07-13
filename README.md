@@ -10,7 +10,7 @@ Use the package manager composer to install
 composer require amiminn/support
 ```
 
-## setup
+## setup (optional)
 tambahkan class di `config/app.php`
 ```php
 /* package service provider */
